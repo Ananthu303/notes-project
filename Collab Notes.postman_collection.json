@@ -1,0 +1,713 @@
+{
+	"info": {
+		"_postman_id": "d7619604-8873-47a4-81b5-b44cc55f5a5e",
+		"name": "Collab Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26237581"
+	},
+	"item": [
+		{
+			"name": "Login Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYxNzY0MzY4LCJpYXQiOjE3NjE2Nzc5NjgsImp0aSI6IjRlYjQ4ZGM5ZWI0YTQzM2JiOTczOGI3ODU5NGM4OGUyIiwidXNlcl9pZCI6IjIifQ.QXXQZ4ksQzWSqZVrpeA6UqVazRN86b4T_HgJQvznReI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Adhithyan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Testpassword@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Adhithyan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Testpassword@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jan 2026 16:06:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "489"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2NzU0MjgxNiwiaWF0IjoxNzY3NDU2NDE2LCJqdGkiOiJmMTdkOTcyOTlmZGM0NWFlYTkyNDY2MzM0YzhlM2QxNSIsInVzZXJfaWQiOiIzIn0.WDvGfkAFNQSIlADfbQedwK0GWchHO7WNNRt0u7ECIKI\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3NDU2NzE2LCJpYXQiOjE3Njc0NTY0MTYsImp0aSI6Ijg1ZjdlZDA3NzU2NDQxYzY5NzRhZDA0NDg5YTMwNTljIiwidXNlcl9pZCI6IjMifQ.EZv-KTLDJcyM1886eJyHOHcDc5_-xaya490Qo5aA4hU\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3NDU3MDU3LCJpYXQiOjE3Njc0NTY3NTcsImp0aSI6IjBkOTlhMzA0M2MyYjRkMmRiYmM5YzQ4ZGVlYTQwNmU1IiwidXNlcl9pZCI6IjMifQ.MODjUqwtX-LCnpoGOGyEnCgrpOIU7Owubo7I6Bn6Tjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Hello",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "HelloHelloHello",
+							"type": "text"
+						},
+						{
+							"key": "version",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Notes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Hello",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "HelloHelloHello",
+									"type": "text"
+								},
+								{
+									"key": "version",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jan 2026 16:16:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"title\": \"Hello\",\n    \"content\": \"HelloHelloHello\",\n    \"owner\": 3,\n    \"collaborators\": [],\n    \"created_at\": \"2026-01-03T16:16:43.621643Z\",\n    \"updated_at\": \"2026-01-03T16:16:43.621643Z\"\n}"
+				},
+				{
+					"name": "Update Note",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Hello mr",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "aaarrrrrrrrr",
+									"type": "text"
+								},
+								{
+									"key": "version",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "collaborators",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "collaborators",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notes/5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"5",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "170"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"title\": \"Hello mr\",\n    \"content\": \"aaarrrrrrrrr\",\n    \"owner\": 3,\n    \"collaborators\": [\n        1,\n        2\n    ],\n    \"created_at\": \"2026-01-03T16:51:52.060166Z\",\n    \"updated_at\": \"2026-01-04T08:03:51.659710Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Notes Versions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3NTQzOTg4LCJpYXQiOjE3Njc0NTc1ODgsImp0aSI6ImNmMDFlNjU5NzY4ZTRkMDE4ZWRlNTk2ZGU1NTI1N2Y2IiwidXNlcl9pZCI6IjMifQ.ohC6aOhVxvj9iR8FoVtd5tZ7fKXsWsm7APl0vsrI73I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/5/versions/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"5",
+						"versions",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Notes versions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notes/5/versions/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"5",
+								"versions",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "858"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 29,\n        \"created_at\": \"2026-01-04T07:14:11.483460Z\",\n        \"updated_at\": \"2026-01-04T07:14:11.483460Z\",\n        \"title\": \"Hello\",\n        \"content\": \"aaa\",\n        \"version_number\": 20,\n        \"note\": 5\n    },\n    {\n        \"id\": 28,\n        \"created_at\": \"2026-01-04T07:10:44.550302Z\",\n        \"updated_at\": \"2026-01-04T07:10:44.550302Z\",\n        \"title\": \"Hello Time wrold\",\n        \"content\": \"akhil isaaa\",\n        \"version_number\": 19,\n        \"note\": 5\n    },\n    {\n        \"id\": 27,\n        \"created_at\": \"2026-01-04T07:10:37.131470Z\",\n        \"updated_at\": \"2026-01-04T07:10:37.131470Z\",\n        \"title\": \"Hello Time wrold\",\n        \"content\": \"akhil is\",\n        \"version_number\": 18,\n        \"note\": 5\n    },\n    {\n        \"id\": 26,\n        \"created_at\": \"2026-01-04T07:09:53.013849Z\",\n        \"updated_at\": \"2026-01-04T07:09:53.013849Z\",\n        \"title\": \"Hello Time wrold\",\n        \"content\": \"akhil is\",\n        \"version_number\": 17,\n        \"note\": 5\n    },\n    {\n        \"id\": 25,\n        \"created_at\": \"2026-01-04T07:07:53.793049Z\",\n        \"updated_at\": \"2026-01-04T07:07:53.793049Z\",\n        \"title\": \"Hello Time wrold\",\n        \"content\": \"akhil is here\",\n        \"version_number\": 16,\n        \"note\": 5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "testuser123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Testpassword@123",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "testmail1@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Users",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "testuser123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Testpassword@123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testmail1@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"username\": \"testuser123\",\n    \"email\": \"testmail1@gmail.com\"\n}"
+				},
+				{
+					"name": "Get users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"admin\",\n        \"email\": \"\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"Manukrishna\",\n        \"email\": \"\"\n    },\n    {\n        \"id\": 3,\n        \"username\": \"Adhithyan\",\n        \"email\": \"\"\n    },\n    {\n        \"id\": 4,\n        \"username\": \"testuser\",\n        \"email\": \"\"\n    },\n    {\n        \"id\": 5,\n        \"username\": \"testuser1\",\n        \"email\": \"\"\n    },\n    {\n        \"id\": 6,\n        \"username\": \"testuser12\",\n        \"email\": \"testmail1@gmail.com\"\n    },\n    {\n        \"id\": 7,\n        \"username\": \"testuser123\",\n        \"email\": \"testmail1@gmail.com\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
