@@ -45,7 +45,7 @@ Build a real-time collaborative notes application with features including live u
 1. Clone the repository:  
 ```bash
 git clone https://github.com/Ananthu303/notes-project.git
-cd collab_notes
+cd notes-project
 ```
 
 2. Create a virtual environment and activate it:  
